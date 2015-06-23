@@ -30,20 +30,20 @@ The idea of this slush is: write your app, execute gulp, (run tests) n see the r
 
 ## Installation
 
-Install `slush-marionette-frontend` globally:
+Install `slush-marionette-frontend`:
 
 ```bash
-npm install -g slush-marionette-frontend
+npm install slush-marionette-frontend
 ```
 
 Or directly from this github repo:
 
   
 ```bash
-npm install -g woile/slush-marionette-frontend
+npm install woile/slush-marionette-frontend
 ```         
 
-You'll also need to have `slush` and `gulp` installed globally for a smooth installation
+You'll also need to have `slush` and `gulp` installed globally.
 
 ```bash
 npm install -g gulp slush
