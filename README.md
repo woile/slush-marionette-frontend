@@ -3,12 +3,11 @@
 > Browserify+Backbone+Marionette frontend enviroment
 
 ## Introduction
-This slush aim to provide a plug and play MarionetteJS application.
+This slush aims to provide a plug and play MarionetteJS application.
 
 Provides the following:
 
 * Marionette based application example (updated as much as possible).
-* Api mock up (create the endpoints and what it should return).
 * Includes node-underscorify so you can write your templates in a separate file or in the same index.html.
 * BrowserSync to auto-reload the browser.
 
