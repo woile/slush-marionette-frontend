@@ -7,7 +7,7 @@ This slush aims to provide a plug and play MarionetteJS application.
 
 Provides the following:
 
-* Marionette based application example (updated as much as possible).
+* Marionette based application example (updated as much as possible, with no deprecated features).
 * Includes node-underscorify so you can write your templates in a separate file or in the same index.html.
 * BrowserSync to auto-reload the browser.
 
@@ -35,6 +35,13 @@ Install `slush-marionette-frontend` globally:
 ```bash
 npm install -g slush-marionette-frontend
 ```
+
+Or directly from this github repo:
+
+  
+```bash
+npm install -g woile/slush-marionette-frontend
+```         
 
 You'll also need to have `slush` and `gulp` installed globally for a smooth installation
 
