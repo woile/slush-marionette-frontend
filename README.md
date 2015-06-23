@@ -1,4 +1,4 @@
-# Slush Slush-marionette-frontend [![Build Status](https://secure.travis-ci.org/Woile/slush-marionette-frontend.png?branch=master)](https://travis-ci.org/Woile/slush-marionette-frontend) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-marionette-frontend.png)](http://badges.enytc.com/for/npm/slush-marionette-frontend)
+# Slush Marionette-frontend
 
 > Browserify+Backbone+Marionette frontend enviroment
 
@@ -169,10 +169,13 @@ If you have any problem or suggestion please open an issue [here](https://github
 [jjj]:santiwilly@gmail.com
 
 ## Thanks
-LaPlataJS guys for providing knowledage and the base app seed, totally worth checking it:
-https://github.com/geut/slush-seed-appfy/
+
+@LaPlataJS
+
 @malderete
+
 @dpaez
+
 @tinchoz49
 
 ## Based on:
