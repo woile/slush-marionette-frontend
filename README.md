@@ -176,13 +176,13 @@ If you have any problem or suggestion please open an issue [here](https://github
 
 ## Thanks
 
-@LaPlataJS
+[@LaPlataJS](https://github.com/LaPlataJS)
 
-@malderete
+[@malderete](https://github.com/malderete)
 
-@dpaez
+[@dpaez](https://github.com/dpaez)
 
-@tinchoz49
+[@tinchoz49](https://github.com/tinchoz49)
 
 ## Based on:
 1. [slush-seed-appfy](https://github.com/geut/slush-seed-appfy)
