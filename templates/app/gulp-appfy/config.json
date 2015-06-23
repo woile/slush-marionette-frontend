@@ -1,0 +1,16 @@
+{
+  "sourcePath": "src",
+  "destPath": "dist",
+  "assetsPath": "assets",
+  "entryCss": "index.css",
+  "entryJs": "index.js",
+  "watchify": false,
+  "browsersync": {
+    "port": 3000,
+    "notify": false
+  },
+  "notify" : {
+    "onError": true,
+    "onUpdated": true
+  }
+}

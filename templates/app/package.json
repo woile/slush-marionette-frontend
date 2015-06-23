@@ -1,0 +1,50 @@
+{
+  "name":"<%= appName %>",
+  "version":"<%= appVersion %>",
+  "description":"<%= appDescription %>",
+  "author":{
+    "name":"<%= authorName %>",
+    "email":"<%= authorEmail %>"
+  },
+  "browserify": {
+    "transform": [
+        ["node-underscorify", {
+            "extensions": ["tpl", "html"],
+            "requires": [{"variable": "_", "module": "underscore"}]
+        }]
+    ]
+  },
+  "main":"index.js",
+  "devDependencies":{
+    "jquery":"^2.1.4",
+    "backbone":"~1.1.2",
+    "backbone.marionette":"^2.4.1",
+    "lodash":"^3.9.3",
+    "underscore": "^1.8.3",
+    "node-underscorify": "0.0.14",
+    "browser-sync":"^1.7.0",
+    "browserify":"^8.0.3",
+    "bundle-collapser":"^1.1.4",
+    "cssnano":"^1.0.1",
+    "del":"^1.1.1",
+    "gulp":"^3.8.10",
+    "gulp-notify":"^2.2.0",
+    "gulp-plumber":"^0.6.6",
+    "gulp-postcss":"^5.1.0",
+    "gulp-sourcemaps":"^1.5.2",
+    "gulp-streamify":"0.0.5",
+    "gulp-uglify":"^1.0.2",
+    "gulp-util":"^3.0.1",
+    "gulp-watch":"^3.0.0",
+    "mkdirp":"^0.5.0",
+    "postcss-import":"^5.2.2",
+    "postcss-url":"^3.1.0",
+    "run-sequence":"^1.0.2",
+    "vinyl-buffer":"^1.0.0",
+    "vinyl-source-stream":"^1.0.0",
+    "watchify":"^2.3.0"
+  },
+  "scripts":{
+    "test":"echo \"Error: no test specified\" && exit 1"
+  }
+}
