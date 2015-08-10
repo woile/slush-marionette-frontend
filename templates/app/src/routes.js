@@ -1,5 +1,7 @@
 'use strict';
-var Marionette = require('backbone.marionette');
+
+var Radio = require('backbone.radio'),
+    Marionette = require('backbone.marionette');
 
 module.exports = function(App) {
 
@@ -28,6 +30,13 @@ module.exports = function(App) {
     var router = new App.Router({
         controller: urlHandler
     });
+
+    Radio.channel('root').on('create:layout', function() {
+        var layout = require('./components/layout')();
+        App.main.show(layout, {forceShow: true});
+    });
+    // Create layout
+    Radio.channel('root').trigger('create:layout');
 
     return {
         'router': router,

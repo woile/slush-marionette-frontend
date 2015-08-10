@@ -16,10 +16,7 @@ require('./routes')(App);
 
 App.on('start', function() {
     if (Backbone.history) {
-        Backbone.history.start({
-            pushState: true,
-            root: '/'
-        });
+        Backbone.history.start({});
     }
 });
 
