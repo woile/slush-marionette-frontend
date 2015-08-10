@@ -35,7 +35,7 @@ var gulp = require('gulp');
      * Tasks are in `tasks/`
      */
     addTasks(loadTasks('tasks/'));
-})();
+}());
 
 // require('gulp-load-tasks')(__dirname + '/tasks');
 gulp.task('default', ['init']);

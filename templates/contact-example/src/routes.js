@@ -1,7 +1,18 @@
 'use strict';
 var Marionette = require('backbone.marionette');
 
-module.exports = function (App) {
+module.exports = function(App) {
+
+    /**
+     * Controller of the Router.
+     * @type {Object}
+     */
+    var urlHandler = {
+        sendContact: function() {
+            var Contact = require('./components/contact-example');
+            App.main.show(Contact);
+        }
+    };
 
     /**
      * appRoutes contains:
@@ -14,17 +25,6 @@ module.exports = function (App) {
             'contact': 'sendContact'
         }
     });
-
-    /**
-     * Controller of the Router.
-     * @type {Object}
-     */
-    var urlHandler = {
-        sendContact: function () {
-            var Contact = require('./components/contact-example');
-            App.main.show(Contact);
-        }
-    };
 
     var router = new App.Router({
         controller: urlHandler

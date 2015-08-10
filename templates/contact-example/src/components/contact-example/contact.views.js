@@ -9,7 +9,7 @@ var ResultView = Marionette.ItemView.extend({
 });
 
 var ContactView = Marionette.ItemView.extend({
-    initialize: function (){
+    initialize: function() {
         console.log(this);
     },
     template: require('./contact.html'),
@@ -18,7 +18,7 @@ var ContactView = Marionette.ItemView.extend({
         'change textarea': 'handeFieldChanged',
         'click #submit': 'onSubmit'
     },
-    handeFieldChanged: function(evt){
+    handeFieldChanged: function(evt) {
         /**
          * Handles the event when an input changes and
          * populates the model.
@@ -29,10 +29,10 @@ var ContactView = Marionette.ItemView.extend({
             attrId = changed.id;
         obj[attrId] = value;
 
-        console.log("Changed", obj);
+        console.log('Changed', obj);
         this.model.set(obj);
     },
-    onSubmit: function (evt) {
+    onSubmit: function(evt) {
         evt.preventDefault();
         var result = new ResultView({
             model: this.model

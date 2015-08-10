@@ -1,7 +1,17 @@
 'use strict';
 var Marionette = require('backbone.marionette');
 
-module.exports = function (App) {
+module.exports = function(App) {
+
+    /**
+     * Controller of the Router.
+     * @type {Object}
+     */
+    var urlHandler = {
+        home: function() {
+            // Write home here.
+        }
+    };
 
     /**
      * appRoutes contains:
@@ -14,17 +24,6 @@ module.exports = function (App) {
             '/': 'home'
         }
     });
-
-    /**
-     * Controller of the Router.
-     * @type {Object}
-     */
-    var urlHandler = {
-        home: function () {
-            // var MyView = require('./components/my-view');
-            // App.main.show(MyView);
-        }
-    };
 
     var router = new App.Router({
         controller: urlHandler

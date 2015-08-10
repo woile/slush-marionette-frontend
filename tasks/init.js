@@ -1,16 +1,17 @@
+'use strict';
 (function() {
     /**
      * App Task
      * This is the main task that is invoked for the processing of the slushfile.js
      */
-    'use strict';
     var install = require( 'gulp-install' ),
         conflict = require( 'gulp-conflict' ),
         template = require( 'gulp-template' ),
         rename = require( 'gulp-rename' ),
         gulpFilter = require( 'gulp-filter' ),
-        slugify = require("underscore.string/slugify"),
+        slugify = require('underscore.string/slugify'),
         _ = require( 'underscore' ),
+        path = require('path'),
         inquirer = require( 'inquirer' );
 
     module.exports = function(gulp) {
@@ -21,7 +22,7 @@
         }
         var examples = ['contact-example'];
 
-        var defaults = ( function () {
+        var defaults = (function() {
             var homeDir = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE,
                 workingDirName = process.cwd().split( '/' ).pop().split( '\\' ).pop(),
                 osUserName = homeDir && homeDir.split( '/' ).pop() || 'root',
@@ -36,9 +37,9 @@
                 authorName: user.name || '',
                 authorEmail: user.email || ''
             };
-        } )();
+        }());
 
-        gulp.task( 'init', function ( done ) {
+        gulp.task('init', function(done) {
             var prompts = [ {
                 name: 'appName',
                 message: 'What is the name of your project?',
@@ -75,8 +76,8 @@
                 message: 'Continue?'
             }];
 
-            //Ask
-            return inquirer.prompt( prompts, function ( answers ) {
+            // Ask
+            return inquirer.prompt( prompts, function( answers ) {
                 if ( !answers.moveon ) {
                     return done();
                 }
@@ -85,25 +86,29 @@
                 answers.year = d.getFullYear();
                 answers.date = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
                 var templatesToChange = gulpFilter( ['*', '!gulp'] );
-                var files = [__dirname + '/../templates/app/**'];
+                var files = [path.join(__dirname, '../templates/app/**')];
+                // __dirname + '/../templates/app/**'];
 
                 var include = _.intersection(examples, answers.example);
-                _.each(include, function (choice){
+                _.each(include, function(choice) {
                     // files.push('!' + __dirname + '/../templates/app/src/components/' + choice + '/**');
                     // files.push('!' + __dirname + '/../templates/app/src/components/' + choice);
-                    files.push(__dirname + '/../templates/'+ choice + '/**');
-                    files.push(__dirname + '/../templates/' + choice);
+                    files.push(path.join(__dirname, '../templates', choice, '**'));
+                        // __dirname + '/../templates/'+ choice + '/**');
+
+                        // __dirname + '/../templates/' + choice
+                    files.push(path.join(__dirname, '../templates', choice));
                 });
 
                 gulp.src( files )
                     .pipe( templatesToChange )
                     .pipe( template( answers ) )
                     .pipe( templatesToChange.restore() )
-                    .pipe( rename( function ( file ) {
+                    .pipe( rename( function( file ) {
                         if ( file.basename[ 0 ] === '_' ) {
                             file.basename = '.' + file.basename.slice( 1 );
                         }
-                        _.each(include, function (choice){
+                        _.each(include, function(choice) {
                             /**
                              * TODO Instead of replacing, this should make a diff
                              * and merge the files, but as I just have single file
@@ -117,10 +122,10 @@
                     } ) )
                     .pipe( conflict( './' ) )
                     .pipe( gulp.dest( './' ) )
-                    .pipe( install() ).on( 'end', function () {
+                    .pipe( install() ).on( 'end', function() {
                         done();
                     } );
             } );
         } );
     };
-})();
+}());

@@ -3,8 +3,8 @@
  * view (to avoid problems with require), and in your controlle
  * the method returned should be called.
  */
+'use strict';
 
-module.exports = function () {
-    'use strict';
+module.exports = function() {
 
 };
