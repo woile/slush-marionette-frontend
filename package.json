@@ -1,7 +1,7 @@
 {
     "name": "slush-marionette-frontend",
     "description": "Browserify+Backbone+Marionette frontend enviroment",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "homepage": "https://github.com/Woile/slush-marionette-frontend",
     "author": {
         "name": "Santiago",
@@ -42,6 +42,6 @@
         "underscore.string": "^3.1.1"
       },
     "keywords": [
-        "slushgenerator"
+        "slushgenerator", "marionettejs", "backbone"
     ]
 }
