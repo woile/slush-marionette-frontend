@@ -1,47 +1,54 @@
 {
-    "name": "slush-marionette-frontend",
-    "description": "Browserify+Backbone+Marionette frontend enviroment",
-    "version": "0.1.0",
-    "homepage": "https://github.com/Woile/slush-marionette-frontend",
-    "author": {
-        "name": "Santiago",
-        "email": "santiwilly@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/Woile/slush-marionette-frontend.git"
-    },
-    "bugs": {
-        "url": "https://github.com/Woile/slush-marionette-frontend/issues"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "https://github.com/Woile/slush-marionette-frontend/blob/master/LICENSE"
-    }],
-    "main": "slushfile.js",
-    "engines": {
-        "node": ">= 0.10.26",
-        "npm": ">=1.4.3"
-    },
-    "scripts": {
-        "test": "echo \"No tests\""
-    },
-    "dependencies": {
-        "gulp": "^3.6.2",
-        "gulp-conflict": "^0.1.1",
-        "gulp-filter": "^2.0.2",
-        "gulp-install": "^0.1.4",
-        "gulp-rename": "^1.2.0",
-        "gulp-template": "^0.1.1",
-        "include-all": "^0.1.6",
-        "iniparser": "^1.0.5",
-        "inquirer": "^0.4.1",
-        "path": "^0.11.14",
-        "slush": ">=1.0.0",
-        "underscore": "^1.8.3",
-        "underscore.string": "^3.1.1"
-      },
-    "keywords": [
-        "slushgenerator"
-    ]
+  "name": "slush-marionette-frontend",
+  "description": "Browserify+Backbone+Marionette frontend enviroment",
+  "version": "0.2.0",
+  "homepage": "https://github.com/Woile/slush-marionette-frontend",
+  "author": {
+    "name": "Santiago",
+    "email": "santiwilly@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Woile/slush-marionette-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Woile/slush-marionette-frontend/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Woile/slush-marionette-frontend/blob/master/LICENSE"
+    }
+  ],
+  "main": "slushfile.js",
+  "engines": {
+    "node": ">= 0.10.26",
+    "npm": ">=1.4.3"
+  },
+  "scripts": {
+    "test": "echo \"No tests\""
+  },
+  "dependencies": {
+    "gulp": "^3.6.2",
+    "gulp-conflict": "^0.1.1",
+    "gulp-filter": "^2.0.2",
+    "gulp-install": "^0.1.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-template": "^0.1.1",
+    "include-all": "^0.1.6",
+    "iniparser": "^1.0.5",
+    "inquirer": "^0.4.1",
+    "path": "^0.11.14",
+    "slush": ">=1.0.0",
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.1.1"
+  },
+  "keywords": [
+    "slushgenerator"
+  ],
+  "devDependencies": {
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.1"
+  }
 }

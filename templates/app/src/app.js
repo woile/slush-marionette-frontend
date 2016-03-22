@@ -1,15 +1,15 @@
-'use strict';
 
-var Backbone = require('backbone'),
-    $ = require('jquery');
+var $ = require('jquery'),
+    Backbone = require('backbone');
+
 Backbone.$ = $;
 
 var Marionette = require('backbone.marionette');
-
+require('./shims/radio.shim.js');
 var App = new Marionette.Application();
 
 App.addRegions({
-    'main': '#main'
+    main: '#main'
 });
 
 require('./routes')(App);

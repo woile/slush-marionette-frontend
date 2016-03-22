@@ -10,10 +10,11 @@ Provides the following:
 * Marionette based application example (updated as much as possible, with no deprecated features).
 * Includes node-underscorify so you can write your templates in a separate file or in the same index.html.
 * BrowserSync to auto-reload the browser.
+* Using lodash
+* Using Backbone.Radio
 
 What needs to be done:
 
-* Allow user to choose between using marionette with lodash or underscore.
 * Add Support for i18n with an example.
 * Write frickin tests.
 * Include some kind of fixture or api simulator.
@@ -38,10 +39,10 @@ npm install -g slush-marionette-frontend
 
 Or directly from this github repo:
 
-  
+
 ```bash
 npm install -g woile/slush-marionette-frontend
-```         
+```
 
 You'll also need to have `slush` and `gulp` installed globally.
 

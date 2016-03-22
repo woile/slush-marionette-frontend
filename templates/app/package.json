@@ -10,20 +10,28 @@
     "transform": [
         ["node-underscorify", {
             "extensions": ["tpl", "html"],
-            "requires": [{"variable": "_", "module": "underscore"}]
-        }]
+            "requires": [{"variable": "_", "module": "lodash"}]
+        }],
+        "browserify-swap"
     ]
   },
+  "browserify-swap": {
+    "@packages": [
+      "underscore"
+    ],
+    "all": {
+      "underscore.js$": "lodash"
+    }
+  },
   "main":"index.js",
-  "devDependencies":{
+  "dependencies":{
+    "browserify-swap": "^0.2.2",
     "jquery":"^2.1.4",
     "backbone":"~1.1.2",
-    "backbone.marionette":"^2.4.1",
-    "backbone.radio": "^1.0.0",
-    "lodash":"^3.9.3",
-    "underscore": "^1.8.3",
+    "backbone.marionette":"^2.4.5",
+    "backbone.radio": "^1.0.2",
+    "lodash":"^4.6.1",
     "node-underscorify": "0.0.14",
-    "browser-sync":"^1.7.0",
     "browserify":"^8.0.3",
     "bundle-collapser":"^1.1.4",
     "cssnano":"^1.0.1",
@@ -42,8 +50,15 @@
     "postcss-url":"^3.1.0",
     "run-sequence":"^1.0.2",
     "vinyl-buffer":"^1.0.0",
-    "vinyl-source-stream":"^1.0.0",
-    "watchify":"^2.3.0"
+    "vinyl-source-stream":"^1.0.0"
+  },
+  "devDependencies": {
+    "watchify":"^2.3.0",
+    "browser-sync":"^1.7.0",
+    "babel-eslint": "^6.0.0-beta.5",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.1"
   },
   "scripts":{
     "test":"echo \"Error: no test specified\" && exit 1"
