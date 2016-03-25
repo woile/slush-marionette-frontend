@@ -6,8 +6,8 @@ var runSequence = require( 'run-sequence' );
  * @return {function}      Function task
  */
 module.exports = function ( config ) {
-    return function ( cb ) {
-        config.watchify = true;
-        runSequence( 'browser-sync', 'watch-files', cb );
-    };
+  return function ( cb ) {
+    config.watchify = true;
+    runSequence( 'browser-sync', 'watch-files', cb );
+  };
 };

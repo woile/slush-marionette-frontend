@@ -6,7 +6,7 @@ var runSequence = require( 'run-sequence' );
  * @return {function}      Function task
  */
 module.exports = function ( config ) {
-    return function ( cb ) {
-        runSequence( 'clean', 'browserify', 'postcss', cb );
-    };
+  return function ( cb ) {
+    runSequence( 'clean', 'browserify', 'postcss', cb );
+  };
 }

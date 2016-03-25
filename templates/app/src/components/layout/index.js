@@ -9,7 +9,7 @@ var LayoutView = require('./layout.views');
 
 module.exports = function() {
 
-    var layoutView = new LayoutView.Layout({});
-    return layoutView;
+  var layoutView = new LayoutView.Layout({});
+  return layoutView;
 };
 

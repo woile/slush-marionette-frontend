@@ -6,9 +6,9 @@ var runSequence = require( 'run-sequence' );
  * @return {function}      Function task
  */
 module.exports = function ( config ) {
-    return function ( cb ) {
-        config.debug = true;
-        config.watchify = true;
-        runSequence( 'browserify', 'postcss', cb );
-    };
+  return function ( cb ) {
+    config.debug = true;
+    config.watchify = true;
+    runSequence( 'browserify', 'postcss', cb );
+  };
 };

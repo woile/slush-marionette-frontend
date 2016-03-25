@@ -1,23 +1,35 @@
+'use strict';
 
 var $ = require('jquery'),
-    Backbone = require('backbone');
+  Backbone = require('backbone');
 
 Backbone.$ = $;
 
+function a() {
+  console.log('holi');
+}
+a();
+
+
 var Marionette = require('backbone.marionette');
+
 require('./shims/radio.shim.js');
 var App = new Marionette.Application();
 
 App.addRegions({
-    main: '#main'
+  main: '#main'
 });
 
 require('./routes')(App);
 
-App.on('start', function() {
-    if (Backbone.history) {
-        Backbone.history.start({});
-    }
+App.on('start', function () {
+
+  if (Backbone.history) {
+
+    Backbone.history.start({});
+
+  }
+
 });
 
 module.exports = App;

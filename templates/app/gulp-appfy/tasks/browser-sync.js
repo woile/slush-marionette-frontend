@@ -6,13 +6,13 @@ var browserSync = require( 'browser-sync' );
  * @return {function}        Function task
  */
 module.exports = function ( config ) {
-    return function () {
-        browserSync( {
-            port: config.browsersync.port,
-            notify: config.browsersync.notify,
-            server: {
-                baseDir: './'
-            }
-        } );
-    };
+  return function () {
+    browserSync( {
+      port: config.browsersync.port,
+      notify: config.browsersync.notify,
+      server: {
+        baseDir: './'
+      }
+    } );
+  };
 };

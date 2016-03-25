@@ -6,7 +6,7 @@ var del = require( 'del' );
  * @return {function}      Function task
  */
 module.exports = function ( config ) {
-    return function ( cb ) {
-        del( config.destPath, cb );
-    };
+  return function ( cb ) {
+    del( config.destPath, cb );
+  };
 };
