@@ -10,9 +10,10 @@
 var gulp = require('gulp');
 (function() {
   var includeAll = require('include-all');
-    /**
-     * Loads task modules from a relative path.
-     */
+
+  /**
+   * Loads task modules from a relative path.
+   */
   function loadTasks(relPath) {
     return includeAll({
       dirname: require('path').resolve(__dirname, relPath),
@@ -30,10 +31,11 @@ var gulp = require('gulp');
       }
     }
   }
-    /**
-     * Add all Gulp tasks to the gulpfile.
-     * Tasks are in `tasks/`
-     */
+
+  /**
+   * Add all Gulp tasks to the gulpfile.
+   * Tasks are in `tasks/`
+   */
   addTasks(loadTasks('tasks/'));
 }());
 

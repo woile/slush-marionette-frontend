@@ -50,7 +50,8 @@
     "postcss-url":"^3.1.0",
     "run-sequence":"^1.0.2",
     "vinyl-buffer":"^1.0.0",
-    "vinyl-source-stream":"^1.0.0"
+    "vinyl-source-stream":"^1.0.0",
+    <%= bootstrap %>
   },
   "devDependencies": {
     "watchify":"^2.3.0",
