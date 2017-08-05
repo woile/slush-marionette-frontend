@@ -1,3 +1,6 @@
+# DISCLAIMER: THIS SLUSH IS NO LONGER MAINTAINED.
+
+
 # Slush Marionette-frontend
 
 > Browserify+Backbone+Marionette frontend enviroment
